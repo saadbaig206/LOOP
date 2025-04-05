@@ -1,32 +1,30 @@
-// #ifndef LOGINWINDOW_H
-// #define LOGINWINDOW_H
+#ifndef LOGINWINDOW_H
+#define LOGINWINDOW_H
 
-// #include <QMainWindow>
-// #include <QDialog>
-// #include <QtSql/QSqlDatabase>
+#include <QDialog>
+#include <QtSql/QSqlDatabase>
 
-// namespace Ui {
-// class SignUpWindow;
-// }
+namespace Ui {
+class loginwindow;
+}
 
-// class SignUpWindow : public QDialog
-// {
-//     Q_OBJECT
+class loginwindow : public QDialog
+{
+    Q_OBJECT
 
-// public:
-//     explicit SignUpWindow(QWidget *parent = nullptr);
-//     ~SignUpWindow();
+public:
+    explicit loginwindow(QWidget *parent = nullptr);
+    ~loginwindow();
 
-// private slots:
-//     void on_login_clicked();
-//     void on_back_clicked();
+private slots:
+    void on_back_clicked();
+    void on_login_clicked();
 
-// private:
-//     Ui::SignUpWindow *ui;
-//     QSqlDatabase db;
+private:
+    Ui::loginwindow *ui;  // ✅ This must match the Ui class generated from ui_loginwindow.h
+    QSqlDatabase db;
+};
 
-//     void connectDatabase();
-//     bool insertUser(const QString &username, const QString &password);
-// };
+#endif // LOGINWINDOW_H
 
-// #endif // LOGINWINDOW_H
+

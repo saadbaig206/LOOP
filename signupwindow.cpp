@@ -6,7 +6,7 @@
 #include <QMessageBox>
 
 SignUpWindow::SignUpWindow(QWidget *parent)
-    : QDialog(parent),ui(new Ui::SignUpWindow)
+    : QDialog(parent), ui(new Ui::SignUpWindow)
 {
     ui->setupUi(this);
     Database::connectDB();
@@ -19,6 +19,7 @@ SignUpWindow::~SignUpWindow()
 {
     delete ui;
 }
+
 void SignUpWindow::on_createaccbutton_clicked() {
     QString username = ui->usernamelineedit->text();
     QString password = ui->passwordlineedit->text();
@@ -36,12 +37,12 @@ void SignUpWindow::on_createaccbutton_clicked() {
 
     if (query.exec()) {
         QMessageBox::information(this, "Success", "Account created successfully!");
-        this->close();  // Close the sign-up window
+        this->close();
     } else {
         QMessageBox::critical(this, "Error", "Failed to create account: " + query.lastError().text());
     }
 }
 
 void SignUpWindow::on_backbutton_clicked() {
-    this->close();  // Close the window and go back
+    this->close();
 }

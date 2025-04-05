@@ -21,5 +21,6 @@ private:
     Ui::MainWindow *ui;
 private slots:
     void on_signinbutton_clicked();
+    void on_loginbutton_clicked();
 };
 #endif // MAINWINDOW_H

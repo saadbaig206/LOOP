@@ -31,15 +31,15 @@
   <widget class="QPushButton" name="createaccbutton">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>90</x>
      <y>520</y>
-     <width>151</width>
+     <width>171</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -70,7 +70,7 @@ QPushButton:hover {
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -94,9 +94,9 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>60</y>
+     <y>70</y>
      <width>111</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -119,9 +119,9 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>300</y>
+     <y>310</y>
      <width>111</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -144,9 +144,9 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>240</y>
+     <y>250</y>
      <width>111</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -169,9 +169,9 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>180</y>
+     <y>190</y>
      <width>111</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -194,9 +194,9 @@ QPushButton:hover {
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>120</y>
+     <y>130</y>
      <width>111</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -221,7 +221,7 @@ QPushButton:hover {
      <x>30</x>
      <y>420</y>
      <width>111</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -246,7 +246,7 @@ QPushButton:hover {
      <x>30</x>
      <y>360</y>
      <width>111</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -332,10 +332,10 @@ QPushButton:hover {
   <widget class="QRadioButton" name="malebutton">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>178</x>
      <y>310</y>
-     <width>89</width>
-     <height>20</height>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -352,8 +352,8 @@ QPushButton:hover {
     <rect>
      <x>320</x>
      <y>310</y>
-     <width>89</width>
-     <height>20</height>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -370,7 +370,7 @@ QPushButton:hover {
     <rect>
      <x>160</x>
      <y>361</y>
-     <width>201</width>
+     <width>321</width>
      <height>31</height>
     </rect>
    </property>
@@ -519,7 +519,57 @@ QComboBox QAbstractItemView {
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>591</width>
+     <height>581</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resource.qrc">:/image/logo1.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_4</zorder>
+  <zorder>backbutton</zorder>
+  <zorder>birthdaylable</zorder>
+  <zorder>countrycombobox</zorder>
+  <zorder>countrylable</zorder>
+  <zorder>createaccbutton</zorder>
+  <zorder>datespinbox</zorder>
+  <zorder>femalebutton</zorder>
+  <zorder>firstnamelabel</zorder>
+  <zorder>firstnamelineedit</zorder>
+  <zorder>genderlable</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>lastnamelable</zorder>
+  <zorder>lastnamelineedit</zorder>
+  <zorder>malebutton</zorder>
+  <zorder>monthcombobox</zorder>
+  <zorder>passwordlable</zorder>
+  <zorder>passwordlineedit</zorder>
+  <zorder>usernamelable</zorder>
+  <zorder>usernamelineedit</zorder>
+  <zorder>yearspinbox</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

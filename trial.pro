@@ -12,6 +12,7 @@ CONFIG += c++17
 
 SOURCES += \
     database.cpp \
+    loginwindow.cpp \
     main.cpp \
     mainwindow.cpp \
     signupwindow.cpp \

@@ -1,7 +1,6 @@
 #ifndef SIGNUPWINDOW_H
 #define SIGNUPWINDOW_H
 
-#include <QMainWindow>
 #include <QDialog>
 #include <QtSql/QSqlDatabase>
 
@@ -24,9 +23,7 @@ private slots:
 private:
     Ui::SignUpWindow *ui;
     QSqlDatabase db;
-
-    void connectDatabase();
-    bool insertUser(const QString &username, const QString &password);
 };
 
 #endif // SIGNUPWINDOW_H
+

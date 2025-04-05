@@ -211,8 +211,9 @@ QPushButton:hover {
    </property>
    <property name="font">
     <font>
-     <family>Showcard Gothic</family>
+     <family>Tahoma</family>
      <pointsize>-1</pointsize>
+     <bold>true</bold>
      <strikeout>true</strikeout>
     </font>
    </property>
@@ -236,7 +237,7 @@ QPushButton:hover {
     <bool>false</bool>
    </property>
    <property name="plainText">
-    <string>STAY IN THE LOOP WITH  PEOPLE</string>
+    <string>STAY IN THE LOOP WITH  LOOP</string>
    </property>
    <property name="backgroundVisible">
     <bool>false</bool>
