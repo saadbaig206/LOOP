@@ -33,9 +33,9 @@ public:
     QLabel *lastnamelable;
     QLabel *birthdaylable;
     QLabel *countrylable;
-    QLineEdit *firstnamelineedit;
+    QLineEdit *namelineedit;
     QLineEdit *usernamelineedit;
-    QLineEdit *lastnamelineedit;
+    QLineEdit *emaillineedit;
     QLineEdit *passwordlineedit;
     QRadioButton *malebutton;
     QRadioButton *femalebutton;
@@ -54,12 +54,12 @@ public:
         SignUpWindow->resize(600, 600);
         SignUpWindow->setMinimumSize(QSize(600, 600));
         SignUpWindow->setMaximumSize(QSize(600, 600));
-        SignUpWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(15, 13, 35) ;"));
+        SignUpWindow->setStyleSheet(QString::fromUtf8("background-color: white ;"));
         createaccbutton = new QPushButton(SignUpWindow);
         createaccbutton->setObjectName("createaccbutton");
-        createaccbutton->setGeometry(QRect(110, 520, 151, 41));
+        createaccbutton->setGeometry(QRect(70, 530, 191, 41));
         QFont font;
-        font.setPointSize(14);
+        font.setPointSize(11);
         createaccbutton->setFont(font);
         createaccbutton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgb(86, 75, 205); \n"
@@ -70,11 +70,22 @@ public:
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgba(255, 255, 255, 0.2); \n"
+"   background-color: qlineargradient(\n"
+"x1:0, y1:0, x2:1, y2:1,\n"
+"        stop:0 rgba(70, 130, 180, 255),\n"
+"        stop:1 rgba(25, 25, 112, 255)\n"
+"    );\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(\n"
+"        x1:0, y1:0, x2:1, y2:1,\n"
+"        stop:0 rgba(135, 206, 250, 255),\n"
+"        stop:1 rgba(70, 130, 180, 255)\n"
+"    )\n"
 "}"));
         backbutton = new QPushButton(SignUpWindow);
         backbutton->setObjectName("backbutton");
-        backbutton->setGeometry(QRect(300, 520, 161, 41));
+        backbutton->setGeometry(QRect(310, 530, 191, 41));
         backbutton->setFont(font);
         backbutton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgb(86, 75, 205); \n"
@@ -85,11 +96,22 @@ public:
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgba(255, 255, 255, 0.2); \n"
+"   background-color: qlineargradient(\n"
+"x1:0, y1:0, x2:1, y2:1,\n"
+"        stop:0 rgba(70, 130, 180, 255),\n"
+"        stop:1 rgba(25, 25, 112, 255)\n"
+"    );\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(\n"
+"        x1:0, y1:0, x2:1, y2:1,\n"
+"        stop:0 rgba(135, 206, 250, 255),\n"
+"        stop:1 rgba(70, 130, 180, 255)\n"
+"    )\n"
 "}"));
         firstnamelabel = new QLabel(SignUpWindow);
         firstnamelabel->setObjectName("firstnamelabel");
-        firstnamelabel->setGeometry(QRect(30, 60, 111, 41));
+        firstnamelabel->setGeometry(QRect(10, 60, 131, 41));
         firstnamelabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "   background-color: rgb(86, 75, 205); \n"
 "    color: white; \n"
@@ -100,7 +122,7 @@ public:
         firstnamelabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         genderlable = new QLabel(SignUpWindow);
         genderlable->setObjectName("genderlable");
-        genderlable->setGeometry(QRect(30, 300, 111, 41));
+        genderlable->setGeometry(QRect(10, 300, 131, 41));
         genderlable->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "   background-color: rgb(86, 75, 205); \n"
 "    color: white; \n"
@@ -111,7 +133,7 @@ public:
         genderlable->setAlignment(Qt::AlignmentFlag::AlignCenter);
         passwordlable = new QLabel(SignUpWindow);
         passwordlable->setObjectName("passwordlable");
-        passwordlable->setGeometry(QRect(30, 240, 111, 41));
+        passwordlable->setGeometry(QRect(10, 240, 131, 41));
         passwordlable->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "   background-color: rgb(86, 75, 205); \n"
 "    color: white; \n"
@@ -122,7 +144,7 @@ public:
         passwordlable->setAlignment(Qt::AlignmentFlag::AlignCenter);
         usernamelable = new QLabel(SignUpWindow);
         usernamelable->setObjectName("usernamelable");
-        usernamelable->setGeometry(QRect(30, 180, 111, 41));
+        usernamelable->setGeometry(QRect(10, 180, 131, 41));
         usernamelable->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "   background-color: rgb(86, 75, 205); \n"
 "    color: white; \n"
@@ -133,7 +155,7 @@ public:
         usernamelable->setAlignment(Qt::AlignmentFlag::AlignCenter);
         lastnamelable = new QLabel(SignUpWindow);
         lastnamelable->setObjectName("lastnamelable");
-        lastnamelable->setGeometry(QRect(30, 120, 111, 41));
+        lastnamelable->setGeometry(QRect(10, 120, 131, 41));
         lastnamelable->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "   background-color: rgb(86, 75, 205); \n"
 "    color: white; \n"
@@ -144,7 +166,7 @@ public:
         lastnamelable->setAlignment(Qt::AlignmentFlag::AlignCenter);
         birthdaylable = new QLabel(SignUpWindow);
         birthdaylable->setObjectName("birthdaylable");
-        birthdaylable->setGeometry(QRect(30, 420, 111, 41));
+        birthdaylable->setGeometry(QRect(10, 420, 131, 41));
         birthdaylable->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "   background-color: rgb(86, 75, 205); \n"
 "    color: white; \n"
@@ -155,7 +177,7 @@ public:
         birthdaylable->setAlignment(Qt::AlignmentFlag::AlignCenter);
         countrylable = new QLabel(SignUpWindow);
         countrylable->setObjectName("countrylable");
-        countrylable->setGeometry(QRect(30, 360, 111, 41));
+        countrylable->setGeometry(QRect(10, 360, 131, 41));
         countrylable->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "   background-color: rgb(86, 75, 205); \n"
 "    color: white; \n"
@@ -164,49 +186,57 @@ public:
 "    padding: 5px 10px; \n"
 "}"));
         countrylable->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        firstnamelineedit = new QLineEdit(SignUpWindow);
-        firstnamelineedit->setObjectName("firstnamelineedit");
-        firstnamelineedit->setGeometry(QRect(160, 70, 361, 31));
-        firstnamelineedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        namelineedit = new QLineEdit(SignUpWindow);
+        namelineedit->setObjectName("namelineedit");
+        namelineedit->setGeometry(QRect(160, 60, 401, 41));
+        namelineedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    color: white;\n"
-"    background-color: rgb(15, 13, 35) ;\n"
-"    border: 1px solid white; }"));
+"    background-color:darkgrey;\n"
+"    border: 1px solid white;\n"
+"border-radius: 8px;\n"
+"padding: 4px;}"));
         usernamelineedit = new QLineEdit(SignUpWindow);
         usernamelineedit->setObjectName("usernamelineedit");
-        usernamelineedit->setGeometry(QRect(160, 190, 361, 31));
+        usernamelineedit->setGeometry(QRect(160, 180, 401, 41));
         usernamelineedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    color: white;\n"
-"    background-color: rgb(15, 13, 35) ;\n"
-"    border: 1px solid white; }"));
-        lastnamelineedit = new QLineEdit(SignUpWindow);
-        lastnamelineedit->setObjectName("lastnamelineedit");
-        lastnamelineedit->setGeometry(QRect(160, 130, 361, 31));
-        lastnamelineedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    background-color: darkgrey;\n"
+"    border: 1px solid white;\n"
+"border-radius: 8px;\n"
+"padding: 4px;}"));
+        emaillineedit = new QLineEdit(SignUpWindow);
+        emaillineedit->setObjectName("emaillineedit");
+        emaillineedit->setGeometry(QRect(160, 120, 401, 41));
+        emaillineedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    color: white;\n"
-"    background-color: rgb(15, 13, 35) ;\n"
-"    border: 1px solid white; }"));
+"    background-color: darkgrey;\n"
+"    border: 1px solid white;\n"
+"border-radius: 8px;\n"
+"padding: 4px;}"));
         passwordlineedit = new QLineEdit(SignUpWindow);
         passwordlineedit->setObjectName("passwordlineedit");
-        passwordlineedit->setGeometry(QRect(160, 250, 361, 31));
+        passwordlineedit->setGeometry(QRect(160, 240, 401, 41));
         passwordlineedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    color: white;\n"
-"    background-color: rgb(15, 13, 35) ;\n"
-"    border: 1px solid white; }"));
+"    background-color: darkgrey;\n"
+"    border: 1px solid white;\n"
+"border-radius: 8px;\n"
+"padding: 4px;}"));
         malebutton = new QRadioButton(SignUpWindow);
         malebutton->setObjectName("malebutton");
-        malebutton->setGeometry(QRect(190, 310, 89, 20));
+        malebutton->setGeometry(QRect(210, 310, 101, 31));
         malebutton->setStyleSheet(QString::fromUtf8("QRadioButton{\n"
 " color: white;\n"
 "}"));
         femalebutton = new QRadioButton(SignUpWindow);
         femalebutton->setObjectName("femalebutton");
-        femalebutton->setGeometry(QRect(320, 310, 89, 20));
+        femalebutton->setGeometry(QRect(370, 310, 91, 31));
         femalebutton->setStyleSheet(QString::fromUtf8("QRadioButton{\n"
 " color: white;\n"
 "}"));
         countrycombobox = new QComboBox(SignUpWindow);
         countrycombobox->setObjectName("countrycombobox");
-        countrycombobox->setGeometry(QRect(160, 361, 201, 31));
+        countrycombobox->setGeometry(QRect(160, 361, 371, 31));
         countrycombobox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    color: black; \n"
 "    background-color: white; \n"
@@ -218,7 +248,7 @@ public:
 "    selection-color: blue; }"));
         monthcombobox = new QComboBox(SignUpWindow);
         monthcombobox->setObjectName("monthcombobox");
-        monthcombobox->setGeometry(QRect(160, 421, 91, 31));
+        monthcombobox->setGeometry(QRect(160, 430, 131, 31));
         monthcombobox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    color: black; \n"
 "    background-color: white; \n"
@@ -230,7 +260,7 @@ public:
 "    selection-color: blue; }"));
         datespinbox = new QSpinBox(SignUpWindow);
         datespinbox->setObjectName("datespinbox");
-        datespinbox->setGeometry(QRect(280, 420, 71, 31));
+        datespinbox->setGeometry(QRect(310, 430, 91, 31));
         datespinbox->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "    color: black; \n"
 "    background-color: white; \n"
@@ -240,7 +270,7 @@ public:
         datespinbox->setMaximum(31);
         yearspinbox = new QSpinBox(SignUpWindow);
         yearspinbox->setObjectName("yearspinbox");
-        yearspinbox->setGeometry(QRect(380, 420, 101, 31));
+        yearspinbox->setGeometry(QRect(420, 430, 111, 31));
         yearspinbox->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "    color: black; \n"
 "    background-color: white; \n"
@@ -250,25 +280,47 @@ public:
         yearspinbox->setMaximum(2025);
         label = new QLabel(SignUpWindow);
         label->setObjectName("label");
-        label->setGeometry(QRect(170, 460, 61, 16));
+        label->setGeometry(QRect(200, 470, 61, 16));
         label->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "    color: white; \n"
 "}"));
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
         label_2 = new QLabel(SignUpWindow);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(280, 460, 71, 20));
+        label_2->setGeometry(QRect(310, 470, 71, 20));
         label_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "    color: white; \n"
 "}"));
         label_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
         label_3 = new QLabel(SignUpWindow);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(390, 460, 81, 16));
+        label_3->setGeometry(QRect(440, 470, 81, 16));
         label_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "    color: white; \n"
 "}"));
         label_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        backbutton->raise();
+        birthdaylable->raise();
+        countrycombobox->raise();
+        countrylable->raise();
+        createaccbutton->raise();
+        datespinbox->raise();
+        femalebutton->raise();
+        firstnamelabel->raise();
+        namelineedit->raise();
+        genderlable->raise();
+        label->raise();
+        label_2->raise();
+        label_3->raise();
+        lastnamelable->raise();
+        emaillineedit->raise();
+        malebutton->raise();
+        monthcombobox->raise();
+        passwordlable->raise();
+        passwordlineedit->raise();
+        usernamelable->raise();
+        usernamelineedit->raise();
+        yearspinbox->raise();
 
         retranslateUi(SignUpWindow);
 

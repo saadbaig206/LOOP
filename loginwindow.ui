@@ -26,20 +26,22 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(15, 13, 35) ;</string>
+   <string notr="true">
+   background-color: rgb(15, 14, 35); 
+ </string>
   </property>
   <widget class="QPushButton" name="login">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>80</x>
      <y>530</y>
-     <width>131</width>
+     <width>201</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>-1</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -48,13 +50,22 @@
     color: white; 
     border: 2px solid blue;
     border-radius: 5px;
-    padding: 5px 10px;
-	font-size:17px;
- 
+    padding: 5px 10px; 
 }
 
 QPushButton:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
+   background-color: qlineargradient(
+x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(70, 130, 180, 255),
+        stop:1 rgba(25, 25, 112, 255)
+    );
+}
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(135, 206, 250, 255),
+        stop:1 rgba(70, 130, 180, 255)
+    )
 }</string>
    </property>
    <property name="text">
@@ -66,13 +77,13 @@ QPushButton:hover {
     <rect>
      <x>330</x>
      <y>530</y>
-     <width>141</width>
+     <width>201</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>-1</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -82,11 +93,21 @@ QPushButton:hover {
     border: 2px solid blue;
     border-radius: 5px;
     padding: 5px 10px; 
-	font-size:17px;
 }
 
 QPushButton:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
+   background-color: qlineargradient(
+x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(70, 130, 180, 255),
+        stop:1 rgba(25, 25, 112, 255)
+    );
+}
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(135, 206, 250, 255),
+        stop:1 rgba(70, 130, 180, 255)
+    )
 }</string>
    </property>
    <property name="text">
@@ -96,10 +117,10 @@ QPushButton:hover {
   <widget class="QLabel" name="passwordlable">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>460</y>
-     <width>111</width>
-     <height>31</height>
+     <width>141</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -121,10 +142,10 @@ QPushButton:hover {
   <widget class="QLabel" name="usernamelable">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>390</y>
-     <width>111</width>
-     <height>31</height>
+     <width>141</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -143,45 +164,31 @@ QPushButton:hover {
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="usernamelineedit">
+  <widget class="QLineEdit" name="usernamechecklineedit">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>170</x>
      <y>390</y>
-     <width>361</width>
-     <height>31</height>
+     <width>391</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit {
     color: white;
-    background-color: rgb(15, 13, 35) ;
-    border: 1px solid white; }</string>
+    background-color: rgb(15, 13, 35);
+    border: 1px solid white;
+border-radius: 8px;
+padding: 4px;}</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="passwordlineedit">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>460</y>
-     <width>361</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit {
-    color: white;
-    background-color: rgb(15, 13, 35) ;
-    border: 1px solid white; }</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>-40</y>
-     <width>581</width>
-     <height>631</height>
+     <x>170</x>
+     <y>130</y>
+     <width>251</width>
+     <height>200</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -199,57 +206,63 @@ QPushButton:hover {
    <property name="scaledContents">
     <bool>true</bool>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
   </widget>
-  <widget class="QPlainTextEdit" name="plainTextEdit">
+  <widget class="QLineEdit" name="passwordchecklineedit">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>100</y>
+     <x>170</x>
+     <y>460</y>
+     <width>391</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    color: white;
+    background-color: rgb(15, 13, 35);
+    border: 1px solid white;
+border-radius: 8px;
+padding: 4px;}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>50</y>
      <width>371</width>
-     <height>75</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Showcard Gothic</family>
-     <pointsize>-1</pointsize>
-     <strikeout>true</strikeout>
+     <pointsize>16</pointsize>
     </font>
    </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
    <property name="styleSheet">
-    <string notr="true">QPlainTextEdit {
-    background-color: #0A0F1F; /* Dark background (adjust to match your image) */
-    color: white; /* White text */
-    border: 2px solid #1E2A38; /* Subtle border */
-    font-size: 14px; /* Adjust font size */
-    padding: 5px; /* Add spacing inside */
-    selection-background-color: #30475E; /* Highlight color */
-    selection-color: white; /* Highlighted text color */
-	font-size:18px;
-	border:none;
+    <string notr="true">QLabel {
+      background-color: rgb(15, 14, 35);  
+    color: white; 
 }</string>
    </property>
-   <property name="readOnly">
-    <bool>false</bool>
+   <property name="text">
+    <string>Stay In The Loop With People</string>
    </property>
-   <property name="plainText">
-    <string>STAY IN THE LOOP WITH  PEOPLE</string>
-   </property>
-   <property name="backgroundVisible">
-    <bool>false</bool>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <zorder>label</zorder>
   <zorder>passwordlable</zorder>
-  <zorder>passwordlineedit</zorder>
   <zorder>usernamelable</zorder>
-  <zorder>usernamelineedit</zorder>
+  <zorder>usernamechecklineedit</zorder>
   <zorder>login</zorder>
   <zorder>back</zorder>
-  <zorder>plainTextEdit</zorder>
+  <zorder>label_2</zorder>
+  <zorder>passwordchecklineedit</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources>
   <include location="resource.qrc"/>

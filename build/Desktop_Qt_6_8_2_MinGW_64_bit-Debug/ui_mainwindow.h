@@ -24,9 +24,9 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QLabel *label;
     QPushButton *loginbutton;
     QPushButton *signinbutton;
+    QLabel *label_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,56 +37,88 @@ public:
         MainWindow->resize(600, 600);
         MainWindow->setMinimumSize(QSize(600, 600));
         MainWindow->setMaximumSize(QSize(600, 600));
-        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(15, 13, 35) ;"));
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: white;"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        label = new QLabel(centralwidget);
-        label->setObjectName("label");
-        label->setGeometry(QRect(180, 120, 200, 200));
-        label->setMinimumSize(QSize(200, 200));
-        label->setMaximumSize(QSize(200, 200));
-        label->setPixmap(QPixmap(QString::fromUtf8(":/image/logo1.jpg")));
-        label->setScaledContents(true);
         loginbutton = new QPushButton(centralwidget);
         loginbutton->setObjectName("loginbutton");
-        loginbutton->setGeometry(QRect(340, 450, 171, 61));
+        loginbutton->setGeometry(QRect(160, 430, 281, 51));
         QFont font;
-        font.setPointSize(16);
-        font.setBold(true);
+        font.setFamilies({QString::fromUtf8("Segoe UI")});
+        font.setWeight(QFont::DemiBold);
         loginbutton->setFont(font);
         loginbutton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: rgb(86, 75, 205); \n"
-"    color: white; \n"
-"    border: 2px solid blue;\n"
-"    border-radius: 5px;\n"
-"    padding: 5px 10px; \n"
+"    background-color: #1F2937;      /* Dark gray / almost black */\n"
+"    color: #FFFFFF;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    padding: 10px 24px;\n"
+"    font-size: 20px;\n"
+"    font-weight: 600;\n"
+"    font-family: \"Segoe UI\", sans-serif;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgba(255, 255, 255, 0.2); \n"
-"}"));
+"    background-color: #374151;      /* Slightly lighter on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #111827;      /* Even darker on click */\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #9CA3AF;      /* Muted gray for disabled */\n"
+"    color: #F9FAFB;\n"
+"}\n"
+"\n"
+""));
         signinbutton = new QPushButton(centralwidget);
         signinbutton->setObjectName("signinbutton");
-        signinbutton->setGeometry(QRect(60, 450, 171, 61));
+        signinbutton->setGeometry(QRect(150, 350, 311, 51));
         QFont font1;
-        font1.setPointSize(14);
         font1.setBold(true);
         signinbutton->setFont(font1);
         signinbutton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: rgb(86, 75, 205); \n"
-"    color: white; \n"
-"    border: 2px solid blue;\n"
-"    border-radius: 5px;\n"
-"    padding: 5px 10px; \n"
+"    background-color: #10B981; /* Teal Green */\n"
+"    color: white;\n"
+"    border: none;\n"
+"    border-radius: 10px;\n"
+"    padding: 10px 20px;\n"
+"    font-size: 14px;\n"
+"    font-weight: bold;\n"
+"    letter-spacing: 0.5px;\n"
+"    transition: background-color 0.3s ease;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgba(255, 255, 255, 0.2); \n"
-"}"));
+"    background-color: #059669; /* Slightly darker on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #047857; /* Even darker on click */\n"
+"    padding-left: 11px; /* Simple feedback */\n"
+"    padding-top: 11px;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #D1D5DB; /* Light gray for disabled */\n"
+"    color: #9CA3AF;             /* Muted text */\n"
+"}\n"
+""));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(60, 40, 491, 291));
+        label_2->setMinimumSize(QSize(200, 200));
+        label_2->setStyleSheet(QString::fromUtf8("background-color: white;"));
+        label_2->setPixmap(QPixmap(QString::fromUtf8(":/image/logo1.jpg")));
+        label_2->setScaledContents(true);
         MainWindow->setCentralWidget(centralwidget);
+        label_2->raise();
+        loginbutton->raise();
+        signinbutton->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 600, 22));
+        menubar->setGeometry(QRect(0, 0, 600, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -100,9 +132,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QString());
-        loginbutton->setText(QCoreApplication::translate("MainWindow", "Log in", nullptr));
-        signinbutton->setText(QCoreApplication::translate("MainWindow", "Sign in", nullptr));
+        loginbutton->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
+        signinbutton->setText(QCoreApplication::translate("MainWindow", "Sign Up", nullptr));
+        label_2->setText(QString());
     } // retranslateUi
 
 };

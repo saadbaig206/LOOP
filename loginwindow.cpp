@@ -1,7 +1,7 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"  // THIS is required
 #include "database.h"
-
+#include "appwindow.h"
 #include <QMessageBox>
 #include <QtSql/QSqlQuery>
 #include <QtSql/QSqlError>
@@ -10,6 +10,7 @@ loginwindow::loginwindow(QWidget *parent)
     : QDialog(parent), ui(new Ui::loginwindow)
 {
     ui->setupUi(this);
+    ui->passwordchecklineedit->setEchoMode(QLineEdit::Password);
     db = Database::connectDB();
 }
 
@@ -24,8 +25,8 @@ void loginwindow::on_back_clicked()
 }
 void loginwindow::on_login_clicked()
 {
-    QString username = ui->usernamelineedit->text();
-    QString password = ui->passwordlineedit->text();
+    QString username = ui->usernamechecklineedit->text();
+    QString password = ui->passwordchecklineedit->text();
 
     if (username.isEmpty() || password.isEmpty()) {
         QMessageBox::warning(this, "Input Error", "Please fill in all fields.");
@@ -39,7 +40,10 @@ void loginwindow::on_login_clicked()
 
     if (query.exec() && query.next()) {
         QMessageBox::information(this, "Login", "Login successful!");
+        appwindow *app = new appwindow(username);
+        app->show();
         this->close();
+
     } else {
         QMessageBox::critical(this, "Error", "Invalid username or password.");
     }

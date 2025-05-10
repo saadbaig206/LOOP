@@ -1,0 +1,11 @@
+release/appwindow.o
+release/database.o
+release/loginwindow.o
+release/main.o
+release/mainwindow.o
+release/signupwindow.o
+release/qrc_resource.o
+release/moc_appwindow.o
+release/moc_loginwindow.o
+release/moc_mainwindow.o
+release/moc_signupwindow.o

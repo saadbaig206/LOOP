@@ -2,6 +2,7 @@
 #include "loginwindow.h"
 #include "ui_mainwindow.h"
 #include "signupwindow.h"
+#include "loginwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -27,10 +28,12 @@ void MainWindow::on_signinbutton_clicked()
 
     // Show the signup window
     signUp->show();
+    this->close();
 }
 void MainWindow::on_loginbutton_clicked()
 {
     loginwindow *login = new loginwindow(this);
-    login->exec();  // Shows the login window as a modal dialog
+    login->exec();
+    this->close();
 }
 

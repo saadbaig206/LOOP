@@ -38,9 +38,9 @@ struct qt_meta_tag_ZN12SignUpWindowE_t {};
 #ifdef QT_MOC_HAS_STRINGDATA
 static constexpr auto qt_meta_stringdata_ZN12SignUpWindowE = QtMocHelpers::stringData(
     "SignUpWindow",
-    "on_createAccountButton_clicked",
+    "on_createaccbutton_clicked",
     "",
-    "on_backButton_clicked"
+    "on_backbutton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -79,9 +79,9 @@ Q_CONSTINIT const QMetaObject SignUpWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_tag_ZN12SignUpWindowE_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<SignUpWindow, std::true_type>,
-        // method 'on_createAccountButton_clicked'
+        // method 'on_createaccbutton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_backButton_clicked'
+        // method 'on_backbutton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -92,8 +92,8 @@ void SignUpWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     auto *_t = static_cast<SignUpWindow *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->on_createAccountButton_clicked(); break;
-        case 1: _t->on_backButton_clicked(); break;
+        case 0: _t->on_createaccbutton_clicked(); break;
+        case 1: _t->on_backbutton_clicked(); break;
         default: ;
         }
     }

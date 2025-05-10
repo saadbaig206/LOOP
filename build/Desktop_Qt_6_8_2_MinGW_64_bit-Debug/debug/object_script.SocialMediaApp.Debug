@@ -1,0 +1,11 @@
+debug/appwindow.o
+debug/database.o
+debug/loginwindow.o
+debug/main.o
+debug/mainwindow.o
+debug/signupwindow.o
+debug/qrc_resource.o
+debug/moc_appwindow.o
+debug/moc_loginwindow.o
+debug/moc_mainwindow.o
+debug/moc_signupwindow.o
